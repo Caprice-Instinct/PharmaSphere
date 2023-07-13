@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Supervisor Registration Form
+        </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="form-box">
+            <h1>Supervisor Sign Up</h1>
+            <form action="supervisor_reg.php" method="post">
+                <label for="SSN">SSN:</label><br>
+                <input type="text" id="SSN" name="SSN" required><br><br>
+
+                <label for="sup_fname">First Name:</label><br>
+                <input type="text" id="sup_fname" name="sup_fname" required><br><br>
+
+                <label for="sup_lname">Last Name:</label><br>
+                <input type="text" id="sup_lname" name="sup_lname" required><br><br>
+
+                <label for="sup_email">Email Address:</label><br>
+                <input type="email" id="sup_email" name="sup_email" required><br><br>
+
+                <label for="sup_phone">Phone Number:</label><br>
+                <input type="tel" id="sup_phone" name="sup_phone" required><br><br>
+
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <div class="terms">
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox"> I agree to these <a href='#'> Terms & Conditions</a></label>
+                </div>
+
+                <input type="submit" id="sup_reg" class="btn"><br><br>
+                <input type="reset" id="clear" class="btn">
+                <div class="user">
+                    Already a member? <a href="login.html">
+                        Login Here
+                    </a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
