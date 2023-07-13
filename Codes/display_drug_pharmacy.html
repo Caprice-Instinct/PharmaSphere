@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharmacy Stock</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function loadStock() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'get_stock.php', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    updateTable(response);
+                }
+            };
+            xhr.send();
+        }
+
+        function updateTable(drugs) {
+            var tableBody = document.getElementById('stock-table-body');
+            tableBody.innerHTML = '';
+
+            drugs.forEach(function(drug) {
+                var row = document.createElement('tr');
+
+                var drugIDCell = document.createElement('td');
+                drugIDCell.textContent = drug.drugID;
+                row.appendChild(drugIDCell);
+
+                var drugNameCell = document.createElement('td');
+                drugNameCell.textContent = drug.drugName;
+                row.appendChild(drugNameCell);
+
+                var quantityCell = document.createElement('td');
+                quantityCell.textContent = drug.quantity;
+                row.appendChild(quantityCell);
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Load the stock on page load
+        window.addEventListener('DOMContentLoaded', loadStock);
+    </script>
+</head>
+<body>
+    <header class="username-header">
+        Pharmacy Name
+    </header>
+    <br>
+    <div class="table-container">
+        <h2>Drugs in Stock</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Drug ID</th>
+                    <th>Drug Name</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="stock-table-body">
+                <!-- The table body will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

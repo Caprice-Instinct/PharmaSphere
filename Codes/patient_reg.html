@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-box">
+        <h1>Patient Sign Up</h1>
+        <form action="patient_reg.php" method="post">
+            <label for="SSN">SSN:</label><br>
+            <input type="text" id="SSN" name="SSN" required><br><br>
+
+            <label for="pat_fname">First Name:</label><br>
+            <input type="text" id="pat_fname" name="pat_fname" required><br><br>
+
+            <label for="pat_lname">Last Name:</label><br>
+            <input type="text" id="pat_lname" name="pat_lname" required><br><br>
+
+            <label for="pat_email">Email Address:</label><br>
+            <input type="email" id="pat_email" name="pat_email" required><br><br>
+
+            <label for="pat_phone">Phone Number:</label><br>
+            <input type="tel" id="pat_phone" name="pat_phone" required><br><br>
+
+            <label for="pat_dob">Date of Birth:</label><br>
+            <input type="date" id="pat_dob" name="pat_dob" required><br><br>
+
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <div class="terms">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox"> I agree to these <a href='#'> Terms & Conditions</a></label>
+            </div>
+
+            <input type="submit" id="pat_reg" class="btn">
+            <input type="reset" id="clear" class="btn">
+            <div class="user">
+                Already a member? <a href="login.html">
+                    Login Here
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
