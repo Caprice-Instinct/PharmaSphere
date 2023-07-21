@@ -1,0 +1,311 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #dfe9f5;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 90%;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.form-box {
+  width: 330px;
+  padding: 2rem 1rem;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+#index {
+  width: 300px;
+}
+h1 {
+  font-size: 2rem;
+  color: #07001f;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+a:link, a:visited {
+  background-color: rgb(28, 117, 153);
+  color: rgba(0, 0, 0);
+  border: none;
+  margin-top: 1.4rem;
+  margin-left: 1.4rem;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color:#f2f2f2;
+}
+
+form input,
+form select {
+  width: 92%;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  background: #e4e4e4;
+  background-image: url("arrow-down-icon.png");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  padding-right: 40px;
+}
+
+form input:focus,
+form select:focus {
+  border: 1px solid rgb(192, 192, 192);
+}
+
+select option {
+  background: #fff;
+  color: #000;
+}
+
+.btn {
+  font-size: 1rem;
+  margin-top: 1.8rem;
+  padding: 10px 0;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  width: 90%;
+  color: #fff;
+  cursor: pointer;
+  background: rgb(17, 107, 143);
+}
+
+.btn:hover {
+  background: rgba(17, 107, 143, 0.877);
+}
+
+input:focus,
+select:focus {
+  border: 1px solid rgb(192, 192, 192);
+}
+
+.terms {
+  margin-top: 0.2rem;
+}
+
+.terms input {
+  height: 0.9rem;
+  width: 1rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.terms label {
+  font-size: 1rem;
+}
+
+.terms a {
+  color: rgb(17, 107, 143);
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  margin-top: 0%;
+}
+
+  
+
+.user {
+  font-size: 0.9rem;
+  margin-top: 1.4rem;
+  color: #636363;
+}
+
+.user a {
+  color: rgb(17, 107, 143);
+  text-decoration: none;
+  background-color:#fff;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0%;
+}
+
+.username-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #07001f;
+  margin-bottom: 1.2rem;
+}
+
+.viewdata {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+
+}
+table.viewdata {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+}
+
+table.viewdata th,
+table.viewdata td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+table.viewdata th {
+  background-color: #f2f2f2;
+}
+
+table.viewdata tr:hover {
+  background-color: #e6f2ff;
+}
+
+div.pagination {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+div.pagination a {
+  display: inline-block;
+  padding: 8px;
+  margin-right: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+
+div.pagination a:hover {
+  background-color: #f2f2f2;
+}
+
+
+td a{
+  border: none;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 10px;
+  outline: none;
+  background: rgb(28, 117, 153);
+}
+
+.grid-container{ 
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: 200px 200px 200px;
+  gap: 10px;
+  align-content: space-evenly;
+}
+
+.grid-container > a{
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 10px;
+}
+.grid-container.view_user{
+  grid-template-columns: 200px;
+}
+
+.date-input {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333; 
+}
+
+.date-input::placeholder {
+  color: #999; 
+  font-style: italic; 
+}
+/* General styles for date input field */
+input[type="date"] {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  width: 200px; /* Adjust the width as needed */
+}
+
+input[type="date"]::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(40%); 
+  cursor: pointer; 
+}
+
+input[type="date"]:hover,
+input[type="date"]:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+/* Remove the default outline for the date input */
+input[type="date"]:focus {
+  outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+  padding: 0.4rem;
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field {
+  flex: 1;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field {
+  flex: 2;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none; 
+}

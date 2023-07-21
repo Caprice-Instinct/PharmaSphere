@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharmaceutical Company Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-box">
+        <img src="images\pharmaceutical.png" alt="Login image" height="75" width="75"><br><br>
+        <h1>Pharmaceutical Company Registration Form</h1>
+        <form action="pharmco_reg.php" method="post">
+            Name:<br>
+            <input type="text" id="pharmco_name" name="pharmco_name"><br><br>
+
+            Email:<br>
+            <input type="email" id="pharmco_email" name="pharmco_email"><br><br>
+
+            Phone Number:<br>
+            <input type="tel" id="pharmco_phone" name="pharmco_phone"><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <div class="terms">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox"> I agree to these <a href='#'> Terms & Conditions</a></label>
+            </div>
+
+            <input type="submit" id="pharmco_submit" class="btn">
+            <input type="reset" id="pharmco_reset" class="btn">
+            <div class="user">
+                Already a member? <a href="login.html">
+                    Login Here
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
