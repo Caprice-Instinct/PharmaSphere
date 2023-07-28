@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 <?php
 require_once('connect.php');
 
@@ -43,12 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
+<br><br><br>
+        <button class="back-button" onclick="goBack()">Back</button>
+            <script>
+                function goBack() {
+                    history.back();
+                }
+            </script>
     </body>
 </html>

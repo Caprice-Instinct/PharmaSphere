@@ -66,6 +66,14 @@ if (mysqli_num_rows($result) === 0) {
             <input type="date" name="endDate" id="endDate" required><br>
 
             <input type="submit" value="Assign Prescription" class="btn">
+            <input type="reset" value="Clear" class="btn">
+            <br><br>
+            <button class="back-button" onclick="goBack()">Back</button>
+            <script>
+                function goBack() {
+                    history.back();
+                }
+            </script>
         </form>
     </div>
 </body>

@@ -56,6 +56,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
+<button class="back-button" onclick="goBack()">Back</button>
+            <script>
+                function goBack() {
+                    history.back();
+                }
+            </script>
     </body>
 </html>

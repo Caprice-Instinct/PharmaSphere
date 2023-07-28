@@ -68,6 +68,12 @@ mysqli_close($conn);
                 <?php endforeach; ?>
             </tbody>
         </table>
+        <button class="back-button" onclick="goBack()">Back</button>
+            <script>
+                function goBack() {
+                    history.back();
+                }
+            </script>
     </div>
 </body>
 </html>

@@ -79,6 +79,13 @@ function getDrugNameFromOrderPharmacy($conn, $drugID) {
                 </tr>
             <?php } ?>
         </table>
+        <br><br>
+            <button class="back-button" onclick="goBack()">Back</button>
+            <script>
+                function goBack() {
+                    history.back();
+                }
+            </script>
     </div>
 </body>
 </html>

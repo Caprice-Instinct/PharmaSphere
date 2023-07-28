@@ -23,14 +23,19 @@ $username = $_SESSION['username'];
           Welcome, <?php echo $username; ?>!     
     </header>
     <br>
-    <h1><?php echo $username; ?> Portal</h1>
-    <nav>
-      <ul>
-        <li><a href="add_drug.php">Add Drug</a></li>
-        <li><a href="add_contract.php">Add Contract</a></li>
-        <li><a href="add_sales.php">Add Sales</a></li>
-      </ul>
-    </nav>
+    <div class="link-container">
+        <img src="images\pharmaceutical.png" alt="Login image" height="75" width="75"><br><br>
+        <h1><?php echo $username; ?> Portal</h1>
+        <a href="add_drug.php" class="link">Add Drug</a>
+        <a href="display_drug_sold.php" class="link">Drugs sold</a>
+        <br><br>
+        <button class="back-button" onclick="goBack()">Back</button>
+            <script>
+                function goBack() {
+                    history.back();
+                }
+            </script>
+    </div>
 
     <script>
     var username = '<?php echo $username; ?>';

@@ -44,9 +44,12 @@ mysqli_close($conn);
         Welcome, <?php echo $username; ?>!     
     </header>
     <br>
-    <h2 class="portal-h2"><?php echo $username; ?> Portal</h2>
-    <a href="add_pharmacist.php">Add Pharmacist</a>
-    <a href="display_drug_pharmacy.php">View drugs in stock</a>
-    <a href="display_prescription_pharmacy.php">View drugs dispensed</a>
+    <div class="link-container">
+        <img src="images\pharmacy.png" alt="Login image" height="75" width="75"><br><br>
+        <a href="add_pharmacist.php" class="link">Add Pharmacist</a>
+        <a href="supervisor_reg.html" class="link">Add Supervisor</a>
+        <a href="display_drug_pharmacy.php" class="link">View drugs in stock</a>
+        <a href="display_prescription_pharmacy.php" class="link">View drugs dispensed</a>
+    </div>
 </body>
 </html>

@@ -45,5 +45,14 @@
             </tbody>
         </table>
     </div>
+    <!-- Back Button -->
+    <button class="btn" onclick="goBack()">Back</button>
+
+    <script>
+        function goBack() {
+            // Use the history.back() method to go back to the previous page
+            history.back();
+        }
+    </script>
 </body>
 </html>

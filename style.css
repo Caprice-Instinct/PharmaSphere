@@ -53,7 +53,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  background-color:#f2f2f2;
+  background-color: lightblue;
 }
 
 form input,
@@ -89,10 +89,9 @@ select option {
   border-radius: 20px;
   outline: none;
   border: none;
-  width: 90%;
-  color: #fff;
+  width: 50%;
   cursor: pointer;
-  background: rgb(17, 107, 143);
+  background: #66afe9;
 }
 
 .btn:hover {
@@ -308,4 +307,40 @@ input[type="date"]::-webkit-datetime-edit-year-field {
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-clear-button {
   display: none; 
+}
+
+.link-container{
+  width: 50%;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.link{
+  font-size: 1rem;
+  margin-top: 1.8rem;
+  padding: 10px 0;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  width: 50%;
+  cursor: pointer;
+  background: #66afe9;
+}
+
+.back-button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  color: #000;
+  background: #66afe9;
+  cursor: pointer;
+}
+.back-button:hover {
+  background: rgb(28, 117, 153);
 }

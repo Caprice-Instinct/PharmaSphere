@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Drug</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 <?php
 require_once('connect.php');
 
@@ -12,21 +19,7 @@ if (!isset($_SESSION['userID']) || $_SESSION['user_type'] !== 'Pharmaceutical Co
 $userID = $_SESSION['userID']; // Retrieve the user ID from the session variable
 $username = $_SESSION['username']; // Retrieve the username from the session variable
 
-// Retrieve the pharmacyID based on the logged-in user's ID
-$query = "SELECT pharmcoID FROM pharmco WHERE userID = ?";
-$stmt = mysqli_prepare($conn, $query);
-mysqli_stmt_bind_param($stmt, "i", $userID);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-
-if ($row = mysqli_fetch_assoc($result)) {
-    $pharmcoID = $row['pharmcoID'];
-    $_SESSION['pharmcoid'] = $pharmcoID; // Store the pharmacyID in the session variable
-} else {
-    // Handle the case where pharmacyID is not found
-    echo "Error: Pharmaceutical Company ID not found.";
-    exit();
-}
+// ... Rest of your PHP code ...
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve the drug details from the form submission
@@ -34,8 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $drugDescription = $_POST['drugDescription'];
     $drugPrice = $_POST['drugPrice'];
 
+    // Validate the input data (check if drugName is not empty)
+    if (empty($drugName)) {
+        echo "Error: Drug Name cannot be empty.";
+        echo '<br><a href="javascript:history.go(-1)" class="btn">Back</a>';
+        exit;
+    }
+
     // Retrieve the pharmcoID associated with the user
-    $userID = $_SESSION['userID'];
     $query = "SELECT pharmcoID FROM pharmco WHERE userID = ?";
     $stmt = mysqli_prepare($conn, $query);
     mysqli_stmt_bind_param($stmt, 'i', $userID);
@@ -50,11 +49,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $query = "INSERT INTO drug (pharmcoID, drugName, drugDescription, drugPrice) VALUES (?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $query);
         mysqli_stmt_bind_param($stmt, 'isss', $pharmcoID, $drugName, $drugDescription, $drugPrice);
-        $result = mysqli_stmt_execute($stmt);
+        $insertResult = mysqli_stmt_execute($stmt);
 
         // Check if the insertion was successful
-        if ($result) {
+        if ($insertResult) {
             echo "Drug added successfully!";
+            echo '<br><a href="javascript:history.go(-1)" class="back-button">Back</a>';
             exit;
         } else {
             echo 'Error: ' . mysqli_error($conn);
@@ -71,13 +71,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 mysqli_close($conn);
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Add Drug</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!-- Rest of your HTML code -->
+
     <div class="username-header">
         <?php echo $_SESSION['username']; ?><br>
     </div>
